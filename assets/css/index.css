@@ -1,0 +1,13 @@
+.container{
+    margin-top: 5vh;
+}
+#fiche{
+    border: 1px black solid;
+    width: 40vw;
+    height: 40vh;
+    margin-top: 20vh;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+}
