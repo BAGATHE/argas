@@ -1,9 +1,13 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
-Class CitizenController extends CI_Controller{
+require_once(APPPATH.'controllers/CitizenParentController.php');
+Class CitizenController extends CitizenParentController{
     public function __construct(){
         parent::__construct();
         $this->load->model('Citizen');
     }
+    public function index(){
+        echo "ato am citizen";
+      }
 
     public function findCitizens($string){     
     if(empty($string)){

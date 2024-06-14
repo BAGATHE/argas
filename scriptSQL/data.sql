@@ -1,12 +1,12 @@
+ 
 /***administrateur**/
-INSERT INTO administrator (username, password, email, phone) VALUES
-('admin1', sha1('lolo'), 'lolemadaly@gmail.com', '00261343886428');
-SELECT * FROM administrator WHERE username = 'admin1' AND password = sha1('lolo');
-
+INSERT INTO user (email,phone,password,profil) VALUES
+('lolemadaly@gmail.com','034 38 864 28',sha1('lolo'),'administrator'),
+('bagathe@gmail.com','032 62 573 46',sha1('bagathe'),'citizen');
 
 /*Citizen*/
-INSERT INTO citizen(firstname,lastname,birthdate,id_gender,id_city) VALUES('Miguel','Gonzales','1980-05-27',1,4);
-INSERT INTO citizen(firstname,lastname,birthdate,id_gender,id_city) VALUES('raul','morata','1990-07-07',1,2);
+INSERT INTO citizen_info(id_citizen,firstname,lastname,birthdate,id_gender,id_city) VALUES(1,'Miguel','Gonzales','1980-05-27',1,4);
+INSERT INTO citizen(id_citizen,firstname,lastname,birthdate,id_gender,id_city) VALUES(2,'raul','morata','1990-07-07',1,2);
 
 
 

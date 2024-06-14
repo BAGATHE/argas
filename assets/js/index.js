@@ -1,15 +1,14 @@
 $(document).ready(function(){
-  var basepath = $('#base_url').val();
  $('#myform').submit(function(event){
      event.preventDefault();
-   
-
+     var form = $(this);
+     $url_controller = form.attr('action');
      // Récupérer les données du formulaire
       var formData = $(this).serialize();
      
         $.ajax({
          type: 'POST',
-         url: basepath+'AdministratorController/checkLogin',
+         url: $url_controller,
          data: formData,
          success: function(result) {
           var response = JSON.parse(result); 
@@ -30,6 +29,7 @@ $(document).ready(function(){
             $('#password').addClass('is-invalid');
           }
           }else{
+            
             var email = $('#email').val();
             var phone = $('#tel').val();
             var password = $('#password').val();

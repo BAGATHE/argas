@@ -8,7 +8,7 @@
                 </div>
                 <input type="hidden" id="base_url"  value="<?=base_url() ?>">
                 <div class="card-body">
-                    <form  id="myform" method="POST">
+                    <form  id="myform" method="POST" action="<?=site_url("AuthentificationController/checkLogin") ?>">
                         <div class="mb-3">
                             <label for="email" class="form-label">Email address</label>
                             <input type="email" class="form-control" id="email" name="email" required>
@@ -34,7 +34,7 @@
                         <button type="submit" class="btn btn-primary">Se connecter</button>
                     </form>
                  <!-- after verification--->
-                 <form id="myFormSubmit" action="<?= base_url('AdministratorController/accessHomePage') ?>" method="POST">
+                 <form id="myFormSubmit" action="<?= base_url('AuthentificationController/accessHomePage') ?>" method="POST">
                     <input type="hidden" name="email" id="emailSubmit" value="">
                     <input type="hidden" name="phone" id="phoneSubmit" value="">
                     <input type="hidden" name="password" id="passwordSubmit" value="">

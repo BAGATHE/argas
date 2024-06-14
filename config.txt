@@ -16,4 +16,10 @@ inserer les information de la base username,password ect..
 5/dans application->config->autoload.php 
 $autoload['libraries'] = array('database','FPDF','session');
 
+initialisation de scss 
+npm init -y 
+
+npm -i D sass
+
+sass --watch assets/.scss/index.scss assets/css/index.css
 

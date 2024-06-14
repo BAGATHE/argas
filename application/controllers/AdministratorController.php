@@ -1,10 +1,13 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
-
-class AdministratorController extends CI_Controller{
+require_once(APPPATH.'controllers/AdministratorParentController.php');
+class AdministratorController extends AdministratorParentController{
     public function __construct(){
         parent::__construct();
         $this->load->model('Administrator');
         $this->load->model('Citizen');
+        }
+        public function index(){
+          echo "ato am admin";
         }
         
         public function checkLogin(){	
